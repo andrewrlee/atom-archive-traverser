@@ -2,7 +2,7 @@ atom-archive-traverser
 ======================
 
 This is a java client for processing an atom feed as described in [this](http://answers.oreilly.com/topic/2153-rest-in-practice-how-to-use-atom-for-event-driven-systems/) article or the awesome [Rest In Practice book](http://www.amazon.co.uk/REST-Practice-Hypermedia-Systems-Architecture/dp/0596805829).
-It uses Abdera and Jersey Client (Though should be trivial to adjust for other REST/Http clients).
+It uses Abdera and Jersey Client (Though it is trivial to create [FeedReaders](https://github.com/plasma147/atom-archive-traverser/blob/master/src/main/java/uk/co/optimisticpanda/atom/reader/FeedReader.java) for other REST/Http clients).
 
 The idea is that it loads an atom feed and then examines each entry in turn until it finds the first entry we wish for it to process.
 If it reaches the end of the feed, then it will follow ["prev-archive" links](http://tools.ietf.org/html/rfc5005) to traverse through all the archive feeds that have ever been published. 
