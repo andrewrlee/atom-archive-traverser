@@ -1,0 +1,7 @@
+#Ignored files
+target
+Servers
+.metadata
+.gradle
+build
+.settings
