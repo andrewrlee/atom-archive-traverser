@@ -59,8 +59,8 @@ public class FeedTraverser {
             Optional<Feed> next = reader.getNextArchive(feed);
             if (next.isPresent()) {
                 forwardsTraverse(next.get());
-                return;
             }
+            return;
         }
 
         Optional<Feed> previous = reader.getPreviousArchive(feed);
@@ -69,7 +69,6 @@ public class FeedTraverser {
         } else {
             forwardsTraverse(feed);
         }
-        return;
     }
 
     // Traverse forwards through the feed from earliest to latest.
