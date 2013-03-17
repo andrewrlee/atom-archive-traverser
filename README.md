@@ -24,7 +24,7 @@ public class TestDependencies {
         // Create Feed Traverser
         FeedTraverser traverser = FeedTraverserBuilder.createFeedTraverser(client)//
                 
-                // Start processing entries after the entry with an id of 0
+                // Start processing entries after finding the entry with an id of 0
                 .foundStartingEntryWhen(idEquals("0")) //
                 
                 // Filter the feed to only process entries that have the CREATE category
