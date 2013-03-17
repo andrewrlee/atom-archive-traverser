@@ -75,7 +75,7 @@ public class FeedTraverserBuilder {
      * 
      * @see {@link EntryFunctions#idEquals(String)}
      */
-    public FeedTraverserBuilder foundStartingEntryWhen(Predicate<Entry> startingOn) {
+    public FeedTraverserBuilder foundLastProcessedEntryWhen(Predicate<Entry> startingOn) {
         this.startingPredicate = startingOn;
         return this;
     }

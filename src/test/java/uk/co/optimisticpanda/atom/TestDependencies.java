@@ -13,7 +13,7 @@ public class TestDependencies {
 
         // Create Feed Traverser
         FeedTraverser traverser = FeedTraverserBuilder.createFeedTraverser(client)//
-                .foundStartingEntryWhen(idEquals("0")) //
+                .foundLastProcessedEntryWhen(idEquals("0")) //
                 .processEntriesWhich(hasCategory("CREATE")) //
                 .whenFound(printEntryDetails) //
                 .build();
