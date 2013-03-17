@@ -25,8 +25,8 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/plasma147/atom-archive-traverser.git</url>
-		<connection>https://github.com/plasma147/atom-archive-traverser.git</connection>
+		<url>scm:git:git@github.com:plasma147/atom-archive-traverser.git</url>
+		<connection>scm:git:git@github.com:plasma147/atom-archive-traverser.git</connection>
 	</scm>
 
 	<profiles>
