@@ -19,7 +19,7 @@ public enum EntryFunctions {
     ;
 
     /** If any category is present then return true */
-    public static Predicate<Entry> hasCategory(String... categories) {
+    public static Predicate<Entry> haveACategoryOf(String... categories) {
         final List<String> list = Arrays.asList(categories);
         return new Predicate<Entry>() {
             public boolean apply(Entry input) {

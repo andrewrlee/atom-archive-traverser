@@ -28,7 +28,7 @@ public class TestDependencies {
                 .foundLastProcessedEntryWhen(idEquals("0")) //
                 
                 // Filter the feed to only process entries that have the CREATE category
-                .processEntriesWhich(hasCategory("CREATE")) //
+                .processEntriesWhich(haveACategoryOf("CREATE")) //
                 
                 // Print out each matching entry
                 .whenFound(printEntryDetails) //

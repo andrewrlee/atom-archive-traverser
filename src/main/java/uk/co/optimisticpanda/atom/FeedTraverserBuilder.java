@@ -86,7 +86,7 @@ public class FeedTraverserBuilder {
      * event they wish to process. This defaults to {@link Predicates#alwaysTrue() meaning the
      * traverser will process all events.
      * 
-     * @see {@link EntryFunctions#hasCategory(String...)}
+     * @see {@link EntryFunctions#haveACategoryOf(String...)}
      */
     public FeedTraverserBuilder processEntriesWhich(Predicate<Entry> entries) {
         this.entriesMatching = entries;

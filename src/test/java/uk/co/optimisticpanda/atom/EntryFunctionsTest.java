@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import static uk.co.optimisticpanda.atom.EntryFunctions.contentHasMediaType;
 import static uk.co.optimisticpanda.atom.EntryFunctions.dontHaveCategory;
 import static uk.co.optimisticpanda.atom.EntryFunctions.earliestToLatest;
-import static uk.co.optimisticpanda.atom.EntryFunctions.hasCategory;
+import static uk.co.optimisticpanda.atom.EntryFunctions.haveACategoryOf;
 import static uk.co.optimisticpanda.atom.EntryFunctions.idEquals;
 import static uk.co.optimisticpanda.atom.EntryFunctions.latestToEarliest;
 import static uk.co.optimisticpanda.atom.TestEntryBuilder.create;
@@ -79,11 +79,11 @@ public class EntryFunctionsTest {
         Entry entry2 = create("2").withCategory("B").instance();
         Entry entry3 = create("3").withCategories("A", "B", "C").instance();
 
-        assertEquals("1,3", titlesOf(filterBy(hasCategory("A"), entry1, entry2, entry3)));
-        assertEquals("1,2,3", titlesOf(filterBy(hasCategory("B"), entry1, entry2, entry3)));
-        assertEquals("3", titlesOf(filterBy(hasCategory("C"), entry1, entry2, entry3)));
-        assertEquals("1,2,3", titlesOf(filterBy(hasCategory("B","C"), entry1, entry2, entry3)));
-        assertEquals("1,2,3", titlesOf(filterBy(hasCategory("A", "B","C"), entry1, entry2, entry3)));
+        assertEquals("1,3", titlesOf(filterBy(haveACategoryOf("A"), entry1, entry2, entry3)));
+        assertEquals("1,2,3", titlesOf(filterBy(haveACategoryOf("B"), entry1, entry2, entry3)));
+        assertEquals("3", titlesOf(filterBy(haveACategoryOf("C"), entry1, entry2, entry3)));
+        assertEquals("1,2,3", titlesOf(filterBy(haveACategoryOf("B","C"), entry1, entry2, entry3)));
+        assertEquals("1,2,3", titlesOf(filterBy(haveACategoryOf("A", "B","C"), entry1, entry2, entry3)));
     }
     
     @Test
