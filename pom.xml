@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.co.optimisticpanda</groupId>
 	<artifactId>atom-archive-traverser</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 
 
 	<name>Atom Archive Traverser</name>
