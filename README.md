@@ -8,6 +8,16 @@ The idea is that it loads an atom feed and then examines each entry in turn unti
 If it reaches the end of the feed, then it will follow ["prev-archive" links](http://tools.ietf.org/html/rfc5005) to traverse through all the archive feeds that have ever been published. 
 When it reaches the entry we are looking for (or the first ever published event), it will then process each event in publication order, following "next-archive" links until it reaches the last published feed.
 
+This is available in the central maven repository:
+
+```xml
+ <dependency>
+    <groupId>uk.co.optimisticpanda</groupId>
+    <artifactId>atom-archive-traverser</artifactId>
+    <version>0.0.2</version>
+ </dependency>
+```
+
 Creating a new feed traverser is trivial:
 ```java
 
